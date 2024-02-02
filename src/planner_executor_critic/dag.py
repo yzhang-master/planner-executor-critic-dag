@@ -18,8 +18,14 @@ class TaskDAG:
     def add(self, task: Task) -> None:
         if task.task_id in self.tasks:
             raise ValueError(f"duplicate task id: {task.task_id}")
+        if len(set(task.dependencies)) != len(task.dependencies):
+            raise ValueError(f"duplicate dependency in task: {task.task_id}")
         self.tasks[task.task_id] = task
-        self.validate()
+        try:
+            self.validate()
+        except ValueError:
+            del self.tasks[task.task_id]
+            raise
 
     def validate(self) -> None:
         for task in self.tasks.values():
