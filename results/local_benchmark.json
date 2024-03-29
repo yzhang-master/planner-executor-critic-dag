@@ -1,0 +1,121 @@
+{
+  "measured_at": "2026-11-14T15:57:34.475864+01:00",
+  "environment": "CPU, deterministic scripted models, no network or provider spend",
+  "cost_model": "synthetic accounting at 1 USD per million input and output tokens",
+  "runs": [
+    {
+      "case": "arithmetic",
+      "workers": 1,
+      "success": true,
+      "nodes": 3,
+      "retries": 0,
+      "model_calls": 7,
+      "input_tokens": 394,
+      "output_tokens": 107,
+      "total_tokens": 501,
+      "accounted_cost_usd": 0.000501,
+      "wall_seconds": 0.08094446699760738
+    },
+    {
+      "case": "arithmetic",
+      "workers": 4,
+      "success": true,
+      "nodes": 3,
+      "retries": 0,
+      "model_calls": 7,
+      "input_tokens": 394,
+      "output_tokens": 107,
+      "total_tokens": 501,
+      "accounted_cost_usd": 0.000501,
+      "wall_seconds": 0.05583177500011516
+    },
+    {
+      "case": "release",
+      "workers": 1,
+      "success": true,
+      "nodes": 4,
+      "retries": 0,
+      "model_calls": 9,
+      "input_tokens": 560,
+      "output_tokens": 167,
+      "total_tokens": 727,
+      "accounted_cost_usd": 0.0007270000000000001,
+      "wall_seconds": 0.1109734390010999
+    },
+    {
+      "case": "release",
+      "workers": 4,
+      "success": true,
+      "nodes": 4,
+      "retries": 0,
+      "model_calls": 9,
+      "input_tokens": 560,
+      "output_tokens": 167,
+      "total_tokens": 727,
+      "accounted_cost_usd": 0.0007270000000000001,
+      "wall_seconds": 0.05599461100064218
+    },
+    {
+      "case": "digest",
+      "workers": 1,
+      "success": true,
+      "nodes": 5,
+      "retries": 0,
+      "model_calls": 11,
+      "input_tokens": 629,
+      "output_tokens": 189,
+      "total_tokens": 818,
+      "accounted_cost_usd": 0.000818,
+      "wall_seconds": 0.13377484399825335
+    },
+    {
+      "case": "digest",
+      "workers": 4,
+      "success": true,
+      "nodes": 5,
+      "retries": 0,
+      "model_calls": 11,
+      "input_tokens": 629,
+      "output_tokens": 189,
+      "total_tokens": 818,
+      "accounted_cost_usd": 0.000818,
+      "wall_seconds": 0.055937459001143
+    },
+    {
+      "case": "critic-retry",
+      "workers": 1,
+      "success": true,
+      "nodes": 3,
+      "retries": 1,
+      "model_calls": 9,
+      "input_tokens": 546,
+      "output_tokens": 142,
+      "total_tokens": 688,
+      "accounted_cost_usd": 0.000688,
+      "wall_seconds": 0.10587326099994243
+    },
+    {
+      "case": "critic-retry",
+      "workers": 4,
+      "success": true,
+      "nodes": 3,
+      "retries": 1,
+      "model_calls": 9,
+      "input_tokens": 546,
+      "output_tokens": 142,
+      "total_tokens": 688,
+      "accounted_cost_usd": 0.000688,
+      "wall_seconds": 0.08228220000091824
+    }
+  ],
+  "summary": {
+    "tasks": 4,
+    "serial_success": 4,
+    "parallel_success": 4,
+    "serial_cost_usd": 0.0027340000000000003,
+    "parallel_cost_usd": 0.0027340000000000003,
+    "serial_wall_seconds": 0.43156601099690306,
+    "parallel_wall_seconds": 0.2500460450028186,
+    "parallel_speedup": 1.725946159204551
+  }
+}
